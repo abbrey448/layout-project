@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sports Website</title>
+
+    <style>
+
+        body{
+            margin:0;
+            font-family:Arial, sans-serif;
+            background-color:#FFF0F5;
+        }
+
+        header{
+            background-color:#FF69B4;
+            color:white;
+            text-align:center;
+            padding:20px;
+        }
+
+        .container{
+            display:flex;
+        }
+
+        aside{
+            width:25%;
+            background-color:#FFD6E8;
+            padding:20px;
+        }
+
+        aside h2{
+            text-align:center;
+            color:#C71585;
+        }
+
+        aside button{
+            width:100%;
+            padding:10px;
+            margin-top:10px;
+            background-color:#FF69B4;
+            color:white;
+            border:none;
+            border-radius:5px;
+            cursor:pointer;
+            font-size:16px;
+        }
+
+        aside button:hover{
+            background-color:#DB7093;
+        }
+
+        main{
+            width:75%;
+            padding:20px;
+        }
+
+        .sport{
+            display:none;
+            background-color:white;
+            border:2px solid #FFB6C1;
+            border-radius:8px;
+            padding:20px;
+        }
+
+        .sport h2{
+            color:#C71585;
+        }
+
+        footer{
+            background-color:#FF69B4;
+            color:white;
+            text-align:center;
+            padding:15px;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <header>
+        <h1>Sports Website</h1>
+       
+    </header>
+
+    <div class="container">
+
+        <aside>
+
+            <h2>Sports</h2>
+
+            <button onclick="showSport('football')">Football</button>
+
+            <button onclick="showSport('basketball')">Basketball</button>
+
+            <button onclick="showSport('swimming')">Swimming</button>
+
+            <button onclick="showSport('running')">Running</button>
+
+            
+
+        </aside>
+
+        <main>
+
+            <div id="football" class="sport">
+
+                <h2>Football</h2>
+
+                <p>
+                    Football is played by two teams with eleven players.
+                    The aim is to score more goals than the other team.
+                    Football is one of the most popular sports in the world.
+                    It helps players stay fit, improve teamwork, and enjoy friendly competition.
+                </p>
+
+            </div>
+
+            <div id="basketball" class="sport">
+
+                <h2>Basketball</h2>
+
+                <p>
+                    Basketball is played by two teams of five players.
+                    The players dribble, pass, and shoot the ball into a hoop to score points.
+                    It is a fast and exciting game that improves fitness and teamwork.
+                </p>
+
+            </div>
+
+            <div id="swimming" class="sport">
+
+                <h2>Swimming</h2>
+
+                <p>
+                    Swimming is a sport that takes place in water.
+                    It helps build strong muscles and keeps the body healthy.
+                    Many people enjoy swimming because it is fun, relaxing, and good exercise.
+                </p>
+
+            </div>
+
+            <div id="running" class="sport">
+
+                <h2>Running</h2>
+
+                <p>
+                    Running is a simple sport that almost everyone can enjoy.
+                    It improves heart health, increases energy, and keeps the body active.
+                    Running races are common in schools and sports competitions.
+                </p>
+
+            </div>
+
+        </main>
+
+    </div>
+
+    <footer>
+        <p>Created by Abbrey</p>
+    </footer>
+
+    <script>
+
+        function showSport(name){
+
+            var sports = document.getElementsByClassName("sport");
+
+            for(var i = 0; i < sports.length; i++){
+                sports[i].style.display = "none";
+            }
+
+            document.getElementById(name).style.display = "block";
+        }
+
+        showSport("football");
+
+    </script>
+
+</body>
+</html>
